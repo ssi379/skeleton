@@ -188,7 +188,7 @@ export function popup(triggerNode: HTMLElement, args: PopupSettings) {
 			window.addEventListener('click', onWindowClick, true);
 			break;
 		case 'hover':
-			triggerNode.addEventListener('mouseover', open, true);
+			triggerNode.addEventListener('mouseenter', open, true);
 			triggerNode.addEventListener('mouseleave', () => close(), true);
 			break;
 		case 'focus-blur':
@@ -219,7 +219,7 @@ export function popup(triggerNode: HTMLElement, args: PopupSettings) {
 		destroy() {
 			// Trigger Events
 			triggerNode.removeEventListener('click', toggle, true);
-			triggerNode.removeEventListener('mouseover', open, true);
+			triggerNode.removeEventListener('mouseenter', open, true);
 			triggerNode.removeEventListener('mouseleave', () => close(), true);
 			triggerNode.removeEventListener('focus', toggle, true);
 			triggerNode.removeEventListener('focus', open, true);
